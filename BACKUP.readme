@@ -1,0 +1,15 @@
+Facing kivi.h error
+
+cmake_minimum_required (VERSION 2.6)
+project (TEST_IAP2_DigE)
+
+
+add_executable(TEST_IAP2_DigE testRunner.cpp  CommunicationsTests.h CommunicationsTests.cpp)
+
+find_package(GTest REQUIRED)
+
+link_directories(/home/hopper/Downloads/AfterRefactored/kivi-ipod-service/build/)
+
+find_library(KIVI_IAP_STACK kivi-iap-stack HINTS /home/hopper/Downloads/AfterRefactored/kivi-ipod-service/build/)
+
+message(STATUS "${KIVI_IAP_STACK}")
